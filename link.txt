@@ -1,0 +1,4 @@
+https://desktop.githubusercontent.com/releases/1.6.3-9d3980c0/GitHubDesktopSetup.exe
+
+
+Heres the link for the github gui app.
