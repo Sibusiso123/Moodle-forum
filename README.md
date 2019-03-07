@@ -7,4 +7,5 @@ NB.Sprint 1
 4.How does the plugin install on moodle and how does it access the database
 5.Check out AJAX Demo,how does it work (Look at jquery)
 6.Setup Backlog
+// comment
 
