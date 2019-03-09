@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ajax Text</title>
+  </head>
+  <body>
+
+    <div id="main">
+      This is the original text when the page first loads.
+    </div>
+
+    <button id="ajax-button" type="button">Update content with Ajax</button>
+
+    <script>
+      function replaceText() {
+        //The following is the Ajax code in JavaScript.
+        var xhr = new XMLHttpRequest(); //We've created an XMLHttpRequest.
+        
+        xhr.open('GET','ServerData.php',true);// We use GET coz we want to retrieve data only, we say true coz we want an asynchronous request.
+        var target = document.getElementById("main");//This means that the response text should be put into main.
+          
+        xhr.onreadystatechange = function(){
+          console.log("readyState " + xhr.readyState);
+          if(xhr.readyState == 2){//Request is sent,received by the server.
+
+           target.innerHTML="Please wait";
+
+          }
+          if(xhr.readyState == 4 && xhr.status == 200){//Response is complete and ready.
+            
+            
+          target.innerHTML=xhr.responseText;//This means that we put whatever we got to xhr.responseText.
+
+          }
+
+        }
+
+        xhr.send();
+	target.innerHTML= "Loading...";
+
+      }
+
+      var button = document.getElementById ("ajax-button"); //This binds an event to the button.
+      button.addEventListener("click", replaceText);//We use addEventListener instead of onclickListener coz we want the correct scope.
+    </script>
+
+  </body>
+</html>
