@@ -16,10 +16,10 @@
       function replaceText() {
         //The following is the Ajax code in JavaScript.
         var xhr = new XMLHttpRequest(); //We've created an XMLHttpRequest.
-        
-        xhr.open('GET','ServerData.php',true);// We use GET coz we want to retrieve data only, we say true coz we want an asynchronous request.
+
+        xhr.open('GET','neymar.html',true);// We use GET coz we want to retrieve data only, we say true coz we want an asynchronous request.
         var target = document.getElementById("main");//This means that the response text should be put into main.
-          
+
         xhr.onreadystatechange = function(){
           console.log("readyState " + xhr.readyState);
           if(xhr.readyState == 2){//Request is sent,received by the server.
@@ -28,8 +28,8 @@
 
           }
           if(xhr.readyState == 4 && xhr.status == 200){//Response is complete and ready.
-            
-            
+
+
           target.innerHTML=xhr.responseText;//This means that we put whatever we got to xhr.responseText.
 
           }
