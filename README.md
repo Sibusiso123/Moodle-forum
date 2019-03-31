@@ -9,3 +9,9 @@ NB.Sprint 1
 6.Setup Backlog
 
 
+NB.Sprint 2
+
+1.Creating a new forum plugin
+2.Adding settings to the plugin management page(allow upvotes,allow downvotes,show upvotes to students,show downvotes to students)
+3.Updating the data base for the plugin to store the vote information
+3.Ajax Handler
