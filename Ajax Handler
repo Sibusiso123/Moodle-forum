@@ -1,0 +1,9 @@
+MOODLE-FORUM : AJAX HANDLER.
+
+In our Moodle-forum we need to have an Ajax Handler because we need to use methods that register handlers that are called when certain events,
+such as initialization or completion,
+take place for any Ajax request on the page since we need to allow students to down vote and up vote on the questions asked and more and also we must make sure that the down and up votes can be shown.
+
+The global events are fired on each Ajax request if the global property in jQuery.ajaxSetup() is true,which it is by default.
+
+Some of the Ajax Handlers that can be used are .ajaxComplete(), .ajaxError(), .ajaxSend(), .ajaxStart(), .ajaxStop(), .ajaxSuccess().
