@@ -1,0 +1,104 @@
+vmuser@host004-10-05:~$ ssh s1477029@lamp.ms.wits.ac.za
+s1477029@lamp.ms.wits.ac.za's password: 
+Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-32-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Mon Apr  1 15:18:38 SAST 2019
+
+  System load:  0.0                Processes:              173
+  Usage of /:   6.1% of 450.54GB   Users logged in:        2
+  Memory usage: 8%                 IP address for em1:     146.141.21.92
+  Swap usage:   0%                 IP address for docker0: 172.17.42.1
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+309 packages can be updated.
+236 updates are security updates.
+
+New release '16.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+s1477029@lamp:~$ mysql -u s1477029 -p;
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 57873
+Server version: 5.5.38-0ubuntu0.14.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| d1477029           |
++--------------------+
+2 rows in set (0.04 sec)
+
+mysql> use d1477029;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> CREATE TABLE STUDENTVOTES(STUDENT_ID INT(10),STUDENT_NAME VARCHAR(20),STUDENT_UPVOTES INT(4),STUDENT_DOWNVOTES INT(4));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> DESC STUDENTVOTES;
++-------------------+-------------+------+-----+---------+-------+
+| Field             | Type        | Null | Key | Default | Extra |
++-------------------+-------------+------+-----+---------+-------+
+| STUDENT_ID        | int(10)     | YES  |     | NULL    |       |
+| STUDENT_NAME      | varchar(20) | YES  |     | NULL    |       |
+| STUDENT_UPVOTES   | int(4)      | YES  |     | NULL    |       |
+| STUDENT_DOWNVOTES | int(4)      | YES  |     | NULL    |       |
++-------------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE STUDENTVOTES MODIFY COLUMN STUDENT_ID INT(10) NOT NULL;
+Query OK, 0 rows affected (0.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC STUDENTVOTES;
++-------------------+-------------+------+-----+---------+-------+
+| Field             | Type        | Null | Key | Default | Extra |
++-------------------+-------------+------+-----+---------+-------+
+| STUDENT_ID        | int(10)     | NO   |     | NULL    |       |
+| STUDENT_NAME      | varchar(20) | YES  |     | NULL    |       |
+| STUDENT_UPVOTES   | int(4)      | YES  |     | NULL    |       |
+| STUDENT_DOWNVOTES | int(4)      | YES  |     | NULL    |       |
++-------------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE STUDENTVOTES MODIFY COLUMN STUDENT_NAME VARCHAR(20),STUDENT_UPVOTES INT(4),STUDENT_DOWNVOTES INT(4) NOT NULL;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STUDENT_UPVOTES INT(4),STUDENT_DOWNVOTES INT(4) NOT NULL' at line 1
+mysql> ALTER TABLE STUDENTVOTES MODIFY COLUMN STUDENT_NAME VARCHAR(20) NOT NULL;
+Query OK, 0 rows affected (0.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE STUDENTVOTES MODIFY COLUMN STUDENT_UPVOTES INT(4) NOT NULL;
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE STUDENTVOTES MODIFY COLUMN STUDENT_DOWNVOTES INT(4) NOT NULL;
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC STUDENTVOTES;
++-------------------+-------------+------+-----+---------+-------+
+| Field             | Type        | Null | Key | Default | Extra |
++-------------------+-------------+------+-----+---------+-------+
+| STUDENT_ID        | int(10)     | NO   |     | NULL    |       |
+| STUDENT_NAME      | varchar(20) | NO   |     | NULL    |       |
+| STUDENT_UPVOTES   | int(4)      | NO   |     | NULL    |       |
+| STUDENT_DOWNVOTES | int(4)      | NO   |     | NULL    |       |
++-------------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+mysql> 
+
