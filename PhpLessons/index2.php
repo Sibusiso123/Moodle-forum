@@ -21,7 +21,7 @@
 
 	//Array
 	sleep(5);
-	$name = array("Emkay","Tumi","Kayge","Lee","Tk");
+	$name = array("Emkay","Khomotjo","Sbuda","Themba","Sbuda");
 	echo $name['0'];
 ?>
 
