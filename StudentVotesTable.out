@@ -76,8 +76,6 @@ mysql> DESC STUDENTVOTES;
 +-------------------+-------------+------+-----+---------+-------+
 4 rows in set (0.00 sec)
 
-mysql> ALTER TABLE STUDENTVOTES MODIFY COLUMN STUDENT_NAME VARCHAR(20),STUDENT_UPVOTES INT(4),STUDENT_DOWNVOTES INT(4) NOT NULL;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STUDENT_UPVOTES INT(4),STUDENT_DOWNVOTES INT(4) NOT NULL' at line 1
 mysql> ALTER TABLE STUDENTVOTES MODIFY COLUMN STUDENT_NAME VARCHAR(20) NOT NULL;
 Query OK, 0 rows affected (0.15 sec)
 Records: 0  Duplicates: 0  Warnings: 0
