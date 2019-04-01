@@ -90,7 +90,7 @@ mysql> DESC TOTAL_VOTES;
 | Field                    | Type    | Null | Key | Default | Extra |
 +--------------------------+---------+------+-----+---------+-------+
 | STUDENT_TOTAL_UPVOTES    | int(20) | NO   |     | NULL    |       |
-| STUDENT_TOTAL_DOWN_VOTES | int(20) | YES  |     | NULL    |       |
+| STUDENT_TOTAL_DOWN_VOTES | int(20) | NO   |     | NULL    |       |
 +--------------------------+---------+------+-----+---------+-------+
 2 rows in set (0.00 sec)
 
