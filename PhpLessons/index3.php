@@ -30,6 +30,9 @@
 
 		echo "Its true that num1 is less than num2"."<br/>";
 	}
+	if(num1>0){
+	        echo "num1 is a positive value"."<br/>";
+	}
 
 	if ($num1<0) {
 
