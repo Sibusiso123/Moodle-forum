@@ -1,5 +1,5 @@
 <?php
 
-sleep(5);
-echo "Software Design Moodle Project";
+sleep(10);
+echo "Software Design Moodle-Forum Down and Uo votes Project";
 ?>
