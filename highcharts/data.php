@@ -10,7 +10,7 @@ try{
 }catch(PDOException $ex){
 	die($ex	->getMessage());
 }
-$stmt=$dbcon->prepare("SELECT * FROM highcharts");
+$stmt=$dbcon->prepare("SELECT * FROM messages");
 $stmt->execute();
 
 $json =[];
@@ -18,7 +18,7 @@ while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
 	extract($row);
 	//echo $id;
 	//echo $amount;
-	$json[]=[(string)$name,(int)$amount];
+	$json[]=[(string)$up,(int)$up];
 }
 echo json_encode($json);
 
