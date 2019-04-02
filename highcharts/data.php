@@ -18,7 +18,7 @@ while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
 	extract($row);
 	//echo $id;
 	//echo $amount;
-	$json[]=[(string)$up,(int)$up];
+	$json[]=[$msg,(int)$up];
 }
 echo json_encode($json);
 
