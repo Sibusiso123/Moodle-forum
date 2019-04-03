@@ -1,29 +1,49 @@
 <?php
 include("config.php");
-$ip=$_SERVER['REMOTE_ADDR'];
+$ip=$_SERVER['REMOTE_ADDR']; 
 if($_POST['id'])
 {
 $id=$_POST['id'];
-$id = mysql_escape_String($id);
-$ip_sql=mysql_query("select ip_add from Voting_IP where mes_id_fk='$id' and ip_add='$ip'");
-$count=mysql_num_rows($ip_sql);
-
+$id = mysqli_real_escape_string($bd,$id);
+$ip_sql=mysqli_query($bd,"SELECT ip_add FROM voting_ip WHERE mes_id_fk='$id' AND ip_add='$ip'");
+$count=mysqli_num_rows($ip_sql);
 if($count==0)
 {
-$sql = "update Messages set down=down+1  where mes_id='$id'";//This will add a 1 to the down table;
-mysql_query( $sql);
+$sql = "UPDATE messages SET down=down+1 WHERE mes_id='$id'";
+mysqli_query($bd,$sql);
 
 ////////     Removing this provides a user to Dislike a Single Post Multiple Times    //////////
-$sql_in = "insert into Voting_IP (mes_id_fk,ip_add) values ('$id','$ip')";
-mysql_query( $sql_in);
+$sql_in = "INSERT INTO voting_ip (mes_id_fk,ip_add) VALUES ('$id','$ip')";
+mysqli_query($bd,$sql_in);
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 }
+else if($count==1)
+{
+$sql = "UPDATE messages SET down=down-1 WHERE mes_id='$id'";
+mysqli_query($bd,$sql);
+
+////////     Removing this provides a user to Dislike a Single Post Multiple Times    //////////
+$sql_in = "INSERT INTO voting_ip (mes_id_fk,ip_add) VALUES ('$id','$ip')";
+mysqli_query($bd,$sql_in);
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+}		
 else
 {
+
+$sql = "UPDATE messages SET down=down+1 WHERE mes_id='$id'";
+mysqli_query($bd,$sql);
+
+////////     Removing this provides a user to Dislike a Single Post Multiple Times    //////////
+$sql_in = "INSERT INTO voting_ip (mes_id_fk,ip_add) VALUES ('$id','$ip')";
+mysqli_query($bd,$sql_in);
+//////////////////////////////////////////////////////////////////////////////////////////////
+
 }
-$result=mysql_query("select down from Messages where mes_id='$id'");
-$row=mysql_fetch_array($result);
+
+$result=mysqli_query($bd,"SELECT down FROM messages WHERE mes_id='$id'");
+$row=mysqli_fetch_array($result);
 $down_value=$row['down'];
 echo $down_value; echo'&nbsp;&or;';
 }

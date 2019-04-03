@@ -13,13 +13,32 @@ $sql = "UPDATE messages SET up=up+1  WHERE mes_id='$id'";
 mysqli_query( $bd,$sql);
 
 ////This part prevents a single user from liking a post multiple times//// 
-$sql_in = "INSERT INTO voting_ip- (mes_id_fk,ip_add) VALUES ('$id','$ip')";
+$sql_in = "INSERT INTO voting_ip (mes_id_fk,ip_add) VALUES ('$id','$ip')";
+mysqli_query( $bd,$sql_in);
+
+}
+else if($count==1)
+{
+$sql = "UPDATE messages SET up=up-1  WHERE mes_id='$id'";
+mysqli_query( $bd,$sql);
+
+////This part prevents a single user from liking a post multiple times//// 
+$sql_in = "INSERT INTO voting_ip (mes_id_fk,ip_add) VALUES ('$id','$ip')";
 mysqli_query( $bd,$sql_in);
 
 }
 else
 {
+$sql = "UPDATE messages SET up=up+1  WHERE mes_id='$id'";
+mysqli_query( $bd,$sql);
+
+////This part prevents a single user from liking a post multiple times//// 
+$sql_in = "INSERT INTO voting_ip (mes_id_fk,ip_add) VALUES ('$id','$ip')";
+mysqli_query( $bd,$sql_in);
+
 }
+	
+
 $result=mysqli_query($bd,"SELECT up FROM messages WHERE mes_id='$id'");
 $row=mysqli_fetch_array($result);
 $up_value=$row['up'];
