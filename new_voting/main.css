@@ -1,0 +1,28 @@
+.posts-wrapper{
+	width: 65%;
+  margin: 20px auto;
+  border: 1px solid #eee;
+}
+.post {
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px 15px 10px 15px;
+  border: 1px solid green;
+}
+.post-info {
+  margin: 10px auto 0px;
+  padding: 5px;
+}
+.fa {
+  font-size: 4em;
+
+}
+.fa-arrow-circle-up, .fa-arrow-circle-down {
+  transform:rotateY(180deg);
+}
+.logged_in_user {
+  padding: 15px 30px 10px;
+}
+i {
+  color: grey;
+}
