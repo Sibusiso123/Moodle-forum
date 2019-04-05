@@ -1,54 +1,28 @@
-# sfdx-travisci [![Build Status](https://travis-ci.org/forcedotcom/sfdx-travisci.svg?branch=master)](https://travis-ci.org/forcedotcom/sfdx-travisci)
+# Draw.io GitHub Integration
 
-For a fully guided walk through of setting up and configuring this sample, see the [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/modules/sfdx_travis_ci) Trailhead module.
+Please read <a href="https://github.com/jgraph/drawio-html5" target="_blank">this</a> for a high-level introduction.
 
-This repository shows one way you can successfully setup Salesforce DX with Travis CI. We make a few assumptions in this README:
+GitHub support is now available https://www.draw.io/?mode=github
 
-- You know how to get your Github repository setup with Travis CI. (Here's their [Getting Started guide](https://docs.travis-ci.com/user/getting-started/).)
-- You've installed the [Travis CLI](https://github.com/travis-ci/travis.rb#installation). 
-- You have properly setup JWT-Based Authorization Flow (i.e. headless). I recommend using [these steps for generating your Self-Signed SSL Certificate](https://devcenter.heroku.com/articles/ssl-certificate-self). 
+An example for integration into GitHub wikis is available here: https://github.com/jgraph/draw.io/wiki/Embed-Diagrams!
 
-If any any of these assumptions aren't true, the following steps won't work.
+--
 
-## Getting Started
+![Diagram](http://jgraph.github.io/drawio-github/diagram.png)
 
-1) Make sure you have the Salesforce CLI installed. Check by running `sfdx force --help` and confirm you see the command output. If you don't have it installed you can download and install it from [here](https://developer.salesforce.com/tools/sfdxcli).
+<a href="http://jgraph.github.io/drawio-github/edit-diagram.html?repo=drawio-github&path=diagram.png" target="_blank">Edit</a> | <a href="https://www.draw.io/#Uhttps%3A%2F%2Fjgraph.github.io%2Fdrawio-github%2Fdiagram.png" target="_blank">Edit As New</a>
 
-2) Confirm you can perform a JWT-based auth: `sfdx force:auth:jwt:grant --clientid <your_consumer_key> --jwtkeyfile server.key --username <your_username> --setdefaultdevhubusername`
+<a href="http://jgraph.github.io/drawio-github/edit-diagram.html" target="_blank">edit-diagram.html</a> does the I/O with GitHub and uses draw.io in embed mode for diagram editing. The page supports the following URL parameters: user, pass, repo, path, ref and action=open (the Edit link above is an example). Using action=open, links for immediate diagram editing in GitHub can be created (requires user and pass parameters). You can also use files on GitHub as templates in draw.io via the url parameter (see Edit As New above).
 
-   **Note:** For more info on setting up JWT-based auth see [Authorize an Org Using the JWT-Based Flow](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_jwt_flow.htm) in the [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev).
+Supported file formats: .png, .svg, .html and .xml (default)
 
-3) [Fork](http://help.github.com/fork-a-repo/) this repo into your github account using the fork link at the top of the page.
+## Self-editing SVG file
 
-4) Clone your forked repo locally: `git clone https://github.com/<git_username>/sfdx-travisci.git`
+![Self-editing Diagram](http://jgraph.github.io/drawio-github/self-editing.svg)
 
-5) From you JWT-Based connected app on Salesforce, retrieve the generated `Consumer Key`.
+<a href="http://jgraph.github.io/drawio-github/self-editing.svg" target="_blank">self-editing.svg</a> is an SVG file with embedded PNG data (as a workaround for missing foreignObject support in Internet Explorer). This combines an image format (eg. for <img src="...") with scripting for GitHub integration. (Click on the link, not the image to enable editing.)
 
-6) Set your `Consumer Key` and `Username` using the Travis CLI. Note that this username is the username that you use to access your Dev Hub.
+## Self-editing HTML file
 
-    travis env set CONSUMERKEY <your_consumer_key>
-    travis env set USERNAME <your_username>
+<a href="http://jgraph.github.io/drawio-github/self-editing.html" target="_blank">self-editing.html</a> is a HTML file with embedded diagrams. The file uses nanocms.js for GitHub I/O and diagram editing, and Bootstrap and nanocms.css for some fancy CSS styles. HTML is used as a container for mutiple diagrams in different formats, including inline SVG with links.
 
-7) Add your `server.key` that you generated previously to the folder called `assets`.
-
-8) Open the `.travis.yml` file and remove the first line that starts with `openssl ...` and save the file.
-
-9) From the root folder of your local project, encrypt your `server.key` value:
-
-    travis encrypt-file assets/server.key assets/server.key.enc --add
-
-10) IMPORTANT! Remove your `server.key`: `rm assets/server.key`, you should never store keys or certificates in a public place.
-
-And you should be ready to go! Now when you commit and push a change, your change will kick off a Travis CI build.
-
-Enjoy!
-
-## Contributing to the Repository ###
-
-If you find any issues or opportunities for improving this repository, fix them!  Feel free to contribute to this project by [forking](http://help.github.com/fork-a-repo/) this repository and make changes to the content.  Once you've made your changes, share them back with the community by sending a pull request. Please see [How to send pull requests](http://help.github.com/send-pull-requests/) for more information about contributing to Github projects.
-
-## Reporting Issues ###
-
-If you find any issues with this demo that you can't fix, feel free to report them in the [issues](https://github.com/forcedotcom/sfdx-travisci/issues) section of this repository.
-
-Test
