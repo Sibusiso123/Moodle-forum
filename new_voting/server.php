@@ -1,10 +1,8 @@
 <?php 
 // connect to database
-<<<<<<< HEAD
-$conn = mysqli_connect('localhost', 'root', '', 'Emkaydatabase');
-=======
-$conn = mysqli_connect('localhost', 'root', '', 'highcharts');//highcharts is the name of our database.
->>>>>>> 5cde501303cd5f5544fef7cb0471d1f90f0758b6
+
+$conn = mysqli_connect('localhost', 'root','','Emkaydatabase');
+
 
 // lets assume a user is logged in with id $user_id
 $user_id = 8;
