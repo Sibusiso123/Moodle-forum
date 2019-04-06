@@ -35,7 +35,7 @@
       	  data-id="<?php echo $post['id'] ?>"></i>
       	<span class="dislikes"><?php echo getDislikes($post['id']); ?></span>
       </div>
-      <span class="likes"><?php echo "Total Number of Votes so far: "; echo(getLikes($post['id'])+ getDislikes($post['id']));
+      <span class="likes"><p></p>    <?php echo "Total Number of Votes so far : "; echo(getLikes($post['id'])+ getDislikes($post['id']));
       ?></span>
    	</div>
    <?php endforeach ?>

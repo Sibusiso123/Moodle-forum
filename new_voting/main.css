@@ -1,10 +1,10 @@
 .posts-wrapper{
-  width: 65%;
-  margin: 10px auto;
+  width: 75%;
+  margin: 20px auto;
   border: 1px solid #eee;
 }
 .post {
-  width: 70%;
+  width: 80%;
   margin: 20px auto;
   padding: 15px 15px 10px 15px;
   border: 1px solid green;
@@ -17,7 +17,8 @@
 .fa {
   font-size: 4em;
   margin-right: 700px;
-  margin-left: -100px;
+  margin-left: -10px;
+  
 
 }
 .fa-arrow-circle-up, .fa-arrow-circle-down {
