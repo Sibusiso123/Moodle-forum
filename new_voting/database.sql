@@ -4,7 +4,7 @@ CREATE TABLE `posts` (/*posts is the table*/
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE `rating_info` (/*rating_info is the table*/
+CREATE TABLE `rating_info` (
   `user_id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   `rating_action` varchar(30) NOT NULL,
