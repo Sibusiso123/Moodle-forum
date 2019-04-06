@@ -1,6 +1,6 @@
 <?php 
 // connect to database
-$conn = mysqli_connect('localhost', 'root', '', 'highcharts');
+$conn = mysqli_connect('localhost', 'root', '', 'Emkaydatabase');
 
 // lets assume a user is logged in with id $user_id
 $user_id = 8;
