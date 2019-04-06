@@ -1,13 +1,14 @@
 .posts-wrapper{
-	width: 65%;
-  margin: 20px auto;
+  width: 65%;
+  margin: 10px auto;
   border: 1px solid #eee;
 }
 .post {
-  width: 90%;
+  width: 70%;
   margin: 20px auto;
   padding: 15px 15px 10px 15px;
   border: 1px solid green;
+  margin-left: 150px;
 }
 .post-info {
   margin: 10px auto 0px;
@@ -15,6 +16,8 @@
 }
 .fa {
   font-size: 4em;
+  margin-right: 700px;
+  margin-left: -100px;
 
 }
 .fa-arrow-circle-up, .fa-arrow-circle-down {
@@ -23,6 +26,7 @@
 .logged_in_user {
   padding: 15px 30px 10px;
 }
+
 i {
   color: grey;
 }

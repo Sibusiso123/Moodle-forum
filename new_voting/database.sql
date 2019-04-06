@@ -1,4 +1,4 @@
-CREATE TABLE `posts` (
+CREATE TABLE `posts` (/*posts is the table*/
   `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -11,7 +11,7 @@ CREATE TABLE `rating_info` (
    CONSTRAINT UC_rating_info UNIQUE (user_id, post_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `posts` (`id`, `text`) VALUES
+INSERT INTO `posts` (`id`, `text`) VALUES 
 (1, 'Moodle Upvote'),
 (2, 'Moodle Downvote'),
 (3, 'Forum'),
