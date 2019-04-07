@@ -13,6 +13,6 @@ CREATE TABLE `rating_info` (
 
 INSERT INTO `posts` (`id`, `text`) VALUES
 (1, 'Is our Moodle working madoda!!'),
-(2, 'Moodle Up-Down voting'),
-(3, 'Forum'),
+(2, 'Moodle Up voting'),
+(3, 'Moodle Down voting'),
 (4, 'Software Design');
