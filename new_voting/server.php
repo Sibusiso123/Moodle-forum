@@ -1,11 +1,11 @@
 <?php 
 // connect to database
 
-$conn = mysqli_connect('localhost', 'root','','Emkaydatabase');
+$conn = mysqli_connect('localhost', 'root','','Emkaydatabase');//Emkaydatabase is the name of my database. 
 
 
 // lets assume a user is logged in with id $user_id
-$user_id = 8;
+$user_id = 9;//This is the user_id of the student that will be voting.
 
 if (!$conn) {
   die("Error connecting to database: " . mysqli_connect_error($conn));
@@ -18,9 +18,9 @@ if (isset($_POST['action'])) {
   $action = $_POST['action'];
   switch ($action) {
   	case 'like':
-         $sql="INSERT INTO rating_info (user_id, post_id, rating_action) 
+         $sql="INSERT INTO rating_info (user_id, post_id, rating_action)  
          	   VALUES ($user_id, $post_id, 'like') 
-         	   ON DUPLICATE KEY UPDATE rating_action='like'";
+         	   ON DUPLICATE KEY UPDATE rating_action='like'"; //rating_info is the name of the table for the info.
          break;
   	case 'dislike':
           $sql="INSERT INTO rating_info (user_id, post_id, rating_action) 
