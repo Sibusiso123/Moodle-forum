@@ -11,8 +11,8 @@ CREATE TABLE `rating_info` (
    CONSTRAINT UC_rating_info UNIQUE (user_id, post_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `posts` (`id`, `text`) VALUES 
-(1, 'Moodle Upvote'),
-(2, 'Moodle Downvote'),
+INSERT INTO `posts` (`id`, `text`) VALUES
+(1, 'Is our Moodle working madoda!!'),
+(2, 'Tomorrow is the second sprint'),
 (3, 'Forum'),
 (4, 'Software Design');
