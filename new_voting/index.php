@@ -22,11 +22,11 @@
       	  <?php endif ?>
       	  data-id="<?php echo $post['id'] ?>"></i>
       	<span class="likes"><?php echo getLikes($post['id']); ?></span>
-      	
+
       	&nbsp;&nbsp;&nbsp;&nbsp;
 
 	    <!-- if user dislikes post, style button differently -->
-      	<i 
+      	<i
       	  <?php if (userDisliked($post['id'])): ?>
       		  class="fa fa-arrow-circle-down dislike-btn"
       	  <?php else: ?>
@@ -37,6 +37,23 @@
       </div>
       <span class="likes"><p></p>    <?php echo "Total Number of Votes so far : "; echo(getLikes($post['id'])+ getDislikes($post['id']));
       ?></span>
+      <?php
+        if(getLikes($post['id'])+ getDislikes($post['id']) == 0){
+          echo "<br/>"."<br/>"."No Student has voted";
+              //echo "<br/>".max(array(getLikes($post['id'])+ getDislikes($post['id'])));
+        }
+        else if(getLikes($post['id'])+ getDislikes($post['id']) == 1){
+          echo "<br/>"."<br/>"."A Student has voted";
+              //echo "<br/>".max(array(getLikes($post['id'])+ getDislikes($post['id'])));
+        }
+        else if(getLikes($post['id'])+ getDislikes($post['id']) >1){
+          echo "<br/>"."<br/>"."Some Students have voted";
+              //echo "<br/>".max(array(getLikes($post['id'])+ getDislikes($post['id'])));
+        }
+        // else {
+        //   echo max(getLikes($post['id'])+ getDislikes($post['id']));
+        // }
+       ?>
    	</div>
    <?php endforeach ?>
   </div>
