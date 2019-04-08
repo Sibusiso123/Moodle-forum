@@ -1,19 +1,20 @@
+image: php:7.3
+
+services:
+    - mysql:5.7.25
+    
+variables:
+    MYSQL_DATABASE: devdb
+    MYSQL_ROOT_PASSWORD: devpassword
+
+before_script:
+    # Install dependencies
+    - bash ci/docker_install.sh > /dev/null
+    
 stages:
-    - build
     - test
-
-build:
-    stage: build
-    script:
-        - echo "Building"
-        - mkdir build
-        - touch build/info.txt
-    artifacts:
-        paths:
-            - build/
-
+    
 test:
     stage: test
     script:
-        - echo "Testing"
-        - test -f "build/info.txt"
+        - phpunit
