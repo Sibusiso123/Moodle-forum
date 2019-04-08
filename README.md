@@ -4,6 +4,12 @@ Please read <a href="https://github.com/jgraph/drawio-html5" target="_blank">thi
 
 GitHub support is now available https://www.draw.io/?mode=github
 
+
+
+[![codecov](https://codecov.io/gh/hex-hypercity/Moodle-forum/branch/master/graph/badge.svg)](https://codecov.io/gh/hex-hypercity/Moodle-forum)
+
+
+
 An example for integration into GitHub wikis is available here: https://github.com/jgraph/draw.io/wiki/Embed-Diagrams!
 
 --
