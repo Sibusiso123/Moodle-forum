@@ -9,7 +9,7 @@ GitHub support is now available https://www.draw.io/?mode=github
 [![codecov](https://codecov.io/gh/hex-hypercity/Moodle-forum/branch/master/graph/badge.svg)](https://codecov.io/gh/hex-hypercity/Moodle-forum)
 
 
-https://travis-ci.org/learnweb/moodle-mod_moodleoverflow.svg?branch=master
+
 
 
 An example for integration into GitHub wikis is available here: https://github.com/jgraph/draw.io/wiki/Embed-Diagrams!
