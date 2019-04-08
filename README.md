@@ -4,6 +4,12 @@ Please read <a href="https://github.com/jgraph/drawio-html5" target="_blank">thi
 
 GitHub support is now available https://www.draw.io/?mode=github
 
+
+
+[![codecov](https://codecov.io/gh/hex-hypercity/Moodle-forum/branch/master/graph/badge.svg)](https://codecov.io/gh/hex-hypercity/Moodle-forum)
+
+
+
 An example for integration into GitHub wikis is available here: https://github.com/jgraph/draw.io/wiki/Embed-Diagrams!
 
 --
@@ -26,3 +32,13 @@ Supported file formats: .png, .svg, .html and .xml (default)
 
 <a href="http://jgraph.github.io/drawio-github/self-editing.html" target="_blank">self-editing.html</a> is a HTML file with embedded diagrams. The file uses nanocms.js for GitHub I/O and diagram editing, and Bootstrap and nanocms.css for some fancy CSS styles. HTML is used as a container for mutiple diagrams in different formats, including inline SVG with links.
 
+[![Coverage Status](https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg?branch=master)](https://coveralls.io/github/hex-hypercity/Moodle-forum?branch=master)
+
+https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg?branch=master(Coverage Status)!:https://coveralls.io/github/hex-hypercity/Moodle-forum?branch=master
+
+{<img src="https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg?branch=master" alt="Coverage Status" />}[https://coveralls.io/github/hex-hypercity/Moodle-forum?branch=master]
+
+<a href='https://coveralls.io/github/hex-hypercity/Moodle-forum?branch=master'><img src='https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg?branch=master' alt='Coverage Status' /></a>
+
+.. image:: https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg?branch=master
+:target: https://coveralls.io/github/hex-hypercity/Moodle-forum?branch=master

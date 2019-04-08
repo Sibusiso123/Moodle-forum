@@ -1,0 +1,14 @@
+#!/bin/bash
+
+apt-get update -yqq
+
+#Install phpunit
+curl --location --output /usr/local/bin/phpunit https://phar.phpunit.de/phpunit.phar
+chmod +x /usr/local/bin/phpunit
+
+#Add mysqli to docker
+docker-php-ext-install mysqli
+
+#install mysql-client
+apt-get install mysql-client -yqq
+

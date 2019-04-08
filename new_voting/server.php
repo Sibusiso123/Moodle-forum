@@ -1,16 +1,20 @@
-<?php 
+<?php
 // connect to database
 
-$conn = mysqli_connect('localhost', 'root','','Emkaydatabase');//Emkaydatabase is the name of my database. 
+$conn = mysqli_connect('localhost', 'root','','highcharts');
+//$conn = mysqli_connect('localhost', 'root','','Emkaydatabase');//Emkaydatabase is the name of my database.
+// $query = mysqli_query("SELECT * FROM post_id ");
 
 
 // lets assume a user is logged in with id $user_id
-$user_id = 9;//This is the user_id of the student that will be voting.
+$user_id = 13;//This is the user_id of the student that will be voting.
 
 if (!$conn) {
   die("Error connecting to database: " . mysqli_connect_error($conn));
   exit();
 }
+
+
 
 // if user clicks like or dislike button
 if (isset($_POST['action'])) {
@@ -18,13 +22,13 @@ if (isset($_POST['action'])) {
   $action = $_POST['action'];
   switch ($action) {
   	case 'like':
-         $sql="INSERT INTO rating_info (user_id, post_id, rating_action)  
-         	   VALUES ($user_id, $post_id, 'like') 
+         $sql="INSERT INTO rating_info (user_id, post_id, rating_action)
+         	   VALUES ($user_id, $post_id, 'like')
          	   ON DUPLICATE KEY UPDATE rating_action='like'"; //rating_info is the name of the table for the info.
          break;
   	case 'dislike':
-          $sql="INSERT INTO rating_info (user_id, post_id, rating_action) 
-               VALUES ($user_id, $post_id, 'dislike') 
+          $sql="INSERT INTO rating_info (user_id, post_id, rating_action)
+               VALUES ($user_id, $post_id, 'dislike')
          	   ON DUPLICATE KEY UPDATE rating_action='dislike'";
          break;
   	case 'unlike':
@@ -47,7 +51,7 @@ if (isset($_POST['action'])) {
 function getLikes($id)
 {
   global $conn;
-  $sql = "SELECT COUNT(*) FROM rating_info 
+  $sql = "SELECT COUNT(*) FROM rating_info
   		  WHERE post_id = $id AND rating_action='like'";
   $rs = mysqli_query($conn, $sql);
   $result = mysqli_fetch_array($rs);
@@ -58,7 +62,7 @@ function getLikes($id)
 function getDislikes($id)
 {
   global $conn;
-  $sql = "SELECT COUNT(*) FROM rating_info 
+  $sql = "SELECT COUNT(*) FROM rating_info
   		  WHERE post_id = $id AND rating_action='dislike'";
   $rs = mysqli_query($conn, $sql);
   $result = mysqli_fetch_array($rs);
@@ -70,8 +74,8 @@ function getRating($id)
 {
   global $conn;
   $rating = array();
-  $likes_query = "SELECT COUNT(*) FROM rating_info WHERE post_id = $id AND rating_action='like'";
-  $dislikes_query = "SELECT COUNT(*) FROM rating_info 
+  $likes_query = "SELECT COUNT(*) FROM rating_info  WHERE post_id = $id AND rating_action='like'";
+  $dislikes_query = "SELECT COUNT(*) FROM rating_info
 		  			WHERE post_id = $id AND rating_action='dislike'";
   $likes_rs = mysqli_query($conn, $likes_query);
   $dislikes_rs = mysqli_query($conn, $dislikes_query);
@@ -89,12 +93,13 @@ function userLiked($post_id)
 {
   global $conn;
   global $user_id;
-  $sql = "SELECT * FROM rating_info WHERE user_id=$user_id 
+  $sql = "SELECT * FROM rating_info  WHERE user_id=$user_id
   		  AND post_id=$post_id AND rating_action='like'";
   $result = mysqli_query($conn, $sql);
   if (mysqli_num_rows($result) > 0) {
   	return true;
-  }else{
+  }
+  else{
   	return false;
   }
 }
@@ -104,7 +109,7 @@ function userDisliked($post_id)
 {
   global $conn;
   global $user_id;
-  $sql = "SELECT * FROM rating_info WHERE user_id=$user_id 
+  $sql = "SELECT * FROM rating_info  WHERE user_id=$user_id
   		  AND post_id=$post_id AND rating_action='dislike'";
   $result = mysqli_query($conn, $sql);
   if (mysqli_num_rows($result) > 0) {
@@ -113,9 +118,20 @@ function userDisliked($post_id)
   	return false;
   }
 }
+// $sql = "SELECT * FROM rating_info order by post_id desc";
+// $result = mysqli_query($conn, $sql);
+// $rating_info  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-$sql = "SELECT * FROM posts";
+
+$sql = "SELECT
+  c.id,
+  c.text,
+  COUNT(*) AS total
+FROM posts AS c
+  INNER JOIN rating_info AS b ON b.post_id = c.id
+GROUP BY c.id
+ORDER BY total DESC";
 $result = mysqli_query($conn, $sql);
 // fetch all posts from database
 // return them as an associative array called $posts
-$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$posts  = mysqli_fetch_all($result, MYSQLI_ASSOC);
