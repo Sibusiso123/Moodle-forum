@@ -1,0 +1,26 @@
+<phpunit bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+>
+
+         <testsuites>
+           <testsuite name="Unit tests">
+             <directory suffix=".php">new_voting/unitTests</directory>
+           </testsuite>
+         </testsuites>
+
+         <filter>
+           <whitelist>
+            <directory suffix=".php">./new_voting/server.php</directory>
+           </whitelist>
+         </filter>
+
+         <logging>
+           <log type="coverage-html" target="test_reports/coverage" title="coverage" charset="UTF-8" yui="true" highlight="true"
+             lowUpperBound="35" highLowerBound="70"/>
+           <log type="coverage-clover" target="test_reports/logs/clover.xml"/>
+           <log type="junit" target="test_reports/logs/clover.xml" logIncompleteSkipped="false"/>
+        </logging>
+</phpunit>
