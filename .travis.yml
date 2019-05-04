@@ -1,68 +1,44 @@
-sudo: false
-dist: trusty
-
 language: php
-
-notifications:
-  email:
-    on_success: never
-    on_failure: change
-
-branches:
-  only:
-    - master
-
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
+  - nightly
 cache:
   directories:
     - vendor
-    - $HOME/.composer/cache
-
 matrix:
-  include:
-    - php: 7.1
-      env: WP_VERSION=latest
-    - php: 7.0
-      env: WP_VERSION=latest
-    - php: 5.6
-      env: WP_VERSION=4.4
-    - php: 5.6
-      env: WP_VERSION=latest
-    - php: 5.6
-      env: WP_VERSION=trunk
-    - php: 5.6
-      env: WP_TRAVISCI=phpcs
-    - php: 5.3
-      env: WP_VERSION=latest
-      dist: precise
-
-
+  allow_failures:
+    - php: nightly
+notifications:
+  irc: "irc.freenode.org##atoum"
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/bcb8350326a64f8fd270
+    on_success: change
+    on_failure: always
+    on_start: never
+env:
+    global:
+        - secure: "vJ1TnFhU9muqLwkiBd13lFqdPJIrwKJ5OJjR3/jQROWQsRO4NPd/I7OfdDKk\noJGYbgjGMw7bmBYI0xjhYfZAnrClwIBvn1Qx5x5UDGxTHC8ZP6xs49AGa37I\n7BJlWC7+nRwPmmLhoLsbut/O7Kkn8IkdJIeChHbdn8RHQIJTJ4Y="
+sudo: false
 before_script:
-  - |
-    if [[ "$WP_TRAVISCI" == "travis:phpunit" ]] ; then
-      bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
-    fi
-  - |
-    if [[ "$WP_TRAVISCI" == "travis:php-lint" ]] || [[ "$WP_TRAVISCI" == "travis:js-tests" ]] ; then
-        npm install -g grunt-cli
-        npm install
-    fi
-  - |
-    if [[ "$WP_TRAVISCI" == "travis:php-lint" ]] ; then
-        composer install
-    fi
-
+  - composer remove 'atoum/reports-extension'
+  - composer require --ignore-platform-reqs 'atoum/telemetry-extension:^1.0.0'
+  - cp resources/configurations/ci/.travis.php.dist .atoum.php
 script:
-  - |
-    if [[ "$WP_TRAVISCI" == "travis:phpunit" ]] ; then
-      phpunit
-    fi
-  - |
-    if [[ "$WP_TRAVISCI" == "travis:php-lint" ]] ; then
-      grunt phpcs
-    fi
-  - |
-    if [[ "$WP_TRAVISCI" == "travis:js-tests" ]] ; then
-      grunt jasmine
-    fi
-
-after script: "sbt coveralls"
+  - bin/atoum
+  - phpenv config-rm xdebug.ini || return 0
+  - mkdir ../phar
+  - php -n -dphar.readonly=Off scripts/phar/generator.php -d ../phar
+  - php -n -ddate.timezone=Europe/Paris ../phar/atoum.phar --test-it -ncc -c .atoum.php
+deploy:
+  provider: releases
+  api_key:
+    secure: lmt12noTXqP/X7a71FffP/lIJR+9sX6vrE7gIdTHroMqfxh2x3u8w1NBs3+npa9lq00Fi2UZiWJY7BurdsTokM75ZqXZAjlC42KCZGLiXKMQZcei5nOdKhKWZ06FSVMFlxf6dhknsMgJjeNmDGVSXhDnN2ZuPnf68may/o/nLaA=
+  file: ../phar/atoum.phar
+  skip_cleanup: true
+  on:
+    tags: true
