@@ -1,0 +1,22 @@
+language: php
+php:
+  - 7.1.1
+  
+dist: trusty
+sudo: required
+
+install:
+  - composer require satooshi/php-coveralls:~0.6@stable
+  - composer require --dev phpunit/dbunit
+  - composer install
+before_script:
+  - mkdir -p ./test_reports/logs
+script:
+  - phpunit --version
+  - composer dump-autoload
+  - phpunit  --coverage-clover ./test_reports/logs/clover.xml
+after_script:
+- php vendor/bin/coveralls -v
+
+after_success:
+- coveralls-upload
