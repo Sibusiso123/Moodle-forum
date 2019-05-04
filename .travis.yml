@@ -36,12 +36,33 @@ matrix:
       dist: precise
 
 
-before_install:
-- composer require phpunit/phpunit:4.8.* satooshi/php-coveralls:dev-master
-- composer install --dev
- 
+before_script:
+  - |
+    if [[ "$WP_TRAVISCI" == "travis:phpunit" ]] ; then
+      bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+    fi
+  - |
+    if [[ "$WP_TRAVISCI" == "travis:php-lint" ]] || [[ "$WP_TRAVISCI" == "travis:js-tests" ]] ; then
+        npm install -g grunt-cli
+        npm install
+    fi
+  - |
+    if [[ "$WP_TRAVISCI" == "travis:php-lint" ]] ; then
+        composer install
+    fi
+
 script:
-- ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
- 
-after_script:
-- php vendor/bin/coveralls -v
+  - |
+    if [[ "$WP_TRAVISCI" == "travis:phpunit" ]] ; then
+      phpunit
+    fi
+  - |
+    if [[ "$WP_TRAVISCI" == "travis:php-lint" ]] ; then
+      grunt phpcs
+    fi
+  - |
+    if [[ "$WP_TRAVISCI" == "travis:js-tests" ]] ; then
+      grunt jasmine
+    fi
+
+after script: "sbt coveralls"
