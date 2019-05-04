@@ -8,8 +8,6 @@ https://travis-ci.org/hex-hypercity/Moodle-forum.svg?branch=master
 
 [![Coverage Status](https://coveralls.io/repos/github/Emkay27/Moodle-forum/badge.svg?branch=%28HEAD+detached+at+bf41342%29)](https://coveralls.io/github/Emkay27/Moodle-forum?branch=%28HEAD+detached+at+bf41342%29)
 
-[![codecov](https://codecov.io/gh/hex-hypercity/Moodle-forum/branch/master/graph/badge.svg)](https://codecov.io/gh/hex-hypercity/Moodle-forum)
-
 [![Build Status](https://travis-ci.org/hex-hypercity/Moodle-forum.svg?branch=master)](https://travis-ci.org/hex-hypercity/Moodle-forum)
 
 An example for integration into GitHub wikis is available here: https://github.com/jgraph/draw.io/wiki/Embed-Diagrams!
