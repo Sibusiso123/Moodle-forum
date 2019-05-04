@@ -10,9 +10,6 @@ GitHub support is now available https://www.draw.io/?mode=github
 
 [![Build Status](https://travis-ci.org/hex-hypercity/Moodle-forum.svg?branch=master)](https://travis-ci.org/hex-hypercity/Moodle-forum)
 
-[![Coverage Status](https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg)](https://coveralls.io/github/hex-hypercity/Moodle-forum)
-
-
 An example for integration into GitHub wikis is available here: https://github.com/jgraph/draw.io/wiki/Embed-Diagrams!
 
 --
