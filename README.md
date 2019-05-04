@@ -4,7 +4,7 @@ Please read <a href="https://github.com/jgraph/drawio-html5" target="_blank">thi
 
 GitHub support is now available https://www.draw.io/?mode=github
 
-[![Coverage Status](https://coveralls.io/repos/github/Emkay27/Moodle-forum/badge.svg?branch=%28HEAD+detached+at+bf41342%29)](https://coveralls.io/github/Emkay27/Moodle-forum?branch=%28HEAD+detached+at+bf41342%29)
+https://travis-ci.org/hex-hypercity/Moodle-forum.svg?branch=master
 
 [![codecov](https://codecov.io/gh/hex-hypercity/Moodle-forum/branch/master/graph/badge.svg)](https://codecov.io/gh/hex-hypercity/Moodle-forum)
 
