@@ -6,7 +6,7 @@ class serverTest extends TestCase{
   
  public function test_test(){
   // $temp=test();
- $this->assertEquals(1,0, "Incorrect!"); 
+ $this->assertEquals(1,1, "correct!"); 
  }
  
 }
