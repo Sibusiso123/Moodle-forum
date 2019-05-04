@@ -4,7 +4,7 @@ use PHPUnit\DbUnit\TestCaseTrait;
 #require_once('locallib.php');
 class serverTest extends TestCase{
   
- public test_test(){
+ public function test_test(){
    $temp=test();
  $this->assertEquals(1,1, "correct!"); 
  }
