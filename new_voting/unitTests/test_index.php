@@ -6,6 +6,7 @@ class indexTest extends TestCase{
   
  public function test_tests(){
    //$temp=tests();
+   echo "Hello World";
  $this->assertEquals(1,1, "correct!"); 
  }
  
