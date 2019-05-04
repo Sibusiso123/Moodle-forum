@@ -5,8 +5,8 @@ use PHPUnit\DbUnit\TestCaseTrait;
 class indexTest extends TestCase{
   
  public function test_tests(){
-   $temp=tests();
- $this->assertEquals(1,1, "correct!"); 
+   //$temp=tests();
+ $this->assertEquals(max(array(getLikes($post['id'])+ getDislikes($post['id']))),max(array(getLikes($post['id'])+ getDislikes($post['id']))), "correct!"); 
  }
  
 }
