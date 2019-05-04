@@ -50,10 +50,6 @@
           echo "<br/>"."<br/>"."Some Students have voted";
               //echo "<br/>".max(array(getLikes($post['id'])+ getDislikes($post['id'])));
         }
-		function testing(){
-		echo "It works";
-		return 0;
-		}
         // else {
         //   echo max(getLikes($post['id'])+ getDislikes($post['id']));
         // }
