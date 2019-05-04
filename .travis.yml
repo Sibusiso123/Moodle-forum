@@ -66,3 +66,4 @@ script:
     fi
 
 after script: "sbt coveralls"
+ -php php-coveralls.phar
