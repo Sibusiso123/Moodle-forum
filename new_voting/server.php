@@ -46,7 +46,10 @@ if (isset($_POST['action'])) {
   echo getRating($post_id);
   exit(0);
 }
+function test(){
 
+return 1;
+}
 // Get total number of likes for a particular post
 function getLikes($id)
 {
