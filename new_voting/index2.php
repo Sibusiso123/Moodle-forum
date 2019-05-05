@@ -123,7 +123,7 @@ $moodleoverflows = $DB->get_records_sql($sql, array($course->id));
 
 // Loop through allmoodleoverflows.
 foreach ($modinfo->get_instances_of('moodleoverflow') as $moodleoverflowid => $cm) {
-
+    function tested(){
     // Check whether the user can see the instance.
     if (!$cm->uservisible OR !isset($moodleoverflows[$moodleoverflowid])) {
         continue;
@@ -391,3 +391,4 @@ if ($generalmoodleoverflows) {
 
 // Print the pages footer.
 echo $OUTPUT->footer();
+}
