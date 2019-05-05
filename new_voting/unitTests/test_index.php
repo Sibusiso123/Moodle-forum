@@ -5,9 +5,10 @@ use PHPUnit\DbUnit\TestCaseTrait;
 class indexTest extends TestCase{
   
  public function test_tests(){
-   //$temp=tests();
+   require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/index.php');
+   $test=tests(8,3);
    echo "Just a test!!";
- $this->assertEquals(1,1, "correct!"); 
+ $this->assertEquals(11,$test, "correct!"); 
  }
  
 }
