@@ -5,9 +5,9 @@ use PHPUnit\DbUnit\TestCaseTrait;
 class index3Test extends TestCase{
   
  public function test_number(){
-   echo (getcwd());
+ //  echo (getcwd());
    require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/index3.php');
-   number();
+   number(2,3);
    echo "It works but doesn't show on the coverall";
  $this->assertEquals(1,1, "correct!"); 
  }
