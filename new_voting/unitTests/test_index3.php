@@ -5,7 +5,7 @@ use PHPUnit\DbUnit\TestCaseTrait;
 class index3Test extends TestCase{
   
  public function test_number(){
-   echo (dgetcwd());
+   echo (getcwd());
    require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/index3.php');
    number();
    echo "It works but doesn't show on the coverall";
