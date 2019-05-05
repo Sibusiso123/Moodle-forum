@@ -1,15 +1,3 @@
-<?php include('server.php'); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Upvote and Downvote</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
-  <div class="posts-wrapper">
    <?php foreach ($posts as $post): ?>
    	<div class="post">
       <?php echo $post['text']; ?>
@@ -50,16 +38,7 @@
           echo "<br/>"."<br/>"."Some Students have voted";
               //echo "<br/>".max(array(getLikes($post['id'])+ getDislikes($post['id'])));
         }
-	function tests(){
-  		return	echo max(array(getLikes($post['id'])+ getDislikes($post['id'])));
+	function tests(getLikes($post['id']),getDislikes($post['id'])){
+  		return getLikes($post['id'])+ getDislikes($post['id']);
 	}
-        // else {
-        //   echo max(getLikes($post['id'])+ getDislikes($post['id']));
-        // }
        ?>
-   	</div>
-   <?php endforeach ?>
-  </div>
-  <script src="scripts.js"></script>
-</body>
-</html>
