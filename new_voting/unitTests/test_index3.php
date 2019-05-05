@@ -5,7 +5,7 @@ use PHPUnit\DbUnit\TestCaseTrait;
 class index3Test extends TestCase{
   
  public function test_number(){
-   //$temp=tests();
+   number();
    echo "It works but doesn't show on the coverall";
  $this->assertEquals(1,1, "correct!"); 
  }
