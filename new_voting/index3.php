@@ -18,10 +18,7 @@
 	//Comparison Operators
 
 	//sleep(10);
-  function number(){
-	$num1=$_GET['num1'];
-	$num2=$_GET['num2'];
-
+  function number($num1,$num2){
 	$Ans1=$num1+$num2;
 	$Ans2=$num1-$num2;
 	$Ans3=$num1/$num2;
