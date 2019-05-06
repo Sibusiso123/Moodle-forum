@@ -4,7 +4,7 @@
 			return $postdislike;
 		}
 		else{
-			return $postlike;
+			return echo $postlike;
 		}
 	}
        ?>
