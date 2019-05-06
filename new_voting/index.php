@@ -6,6 +6,5 @@
 		else{
 			 echo $postlike;
 		}
-		return 1;
 	}
        ?>
