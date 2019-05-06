@@ -6,7 +6,7 @@ GitHub support is now available https://www.draw.io/?mode=github
 
 https://travis-ci.org/hex-hypercity/Moodle-forum.svg?branch=master
 
-[![Coverage Status](https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg?branch=%28HEAD+detached+at+bf48434%29)](https://coveralls.io/github/hex-hypercity/Moodle-forum?branch=%28HEAD+detached+at+bf48434%29)
+[![Coverage Status](https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg?branch=%28HEAD+detached+at+9edd418%29)](https://coveralls.io/github/hex-hypercity/Moodle-forum?branch=%28HEAD+detached+at+9edd418%29)
 
 [![Build Status](https://travis-ci.org/hex-hypercity/Moodle-forum.svg?branch=master)](https://travis-ci.org/hex-hypercity/Moodle-forum)
 
