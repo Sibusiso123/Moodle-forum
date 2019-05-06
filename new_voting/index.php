@@ -3,11 +3,8 @@
   		if($postlike>$postdislike){
 			return $postlike;
 		}
-		else if($postlike<$postdislike){
-			return $postdislike;
-		}
 		else{
-			return $postlike+$postdislike;
+			return $postdislike;
 		}
 	}
        ?>
