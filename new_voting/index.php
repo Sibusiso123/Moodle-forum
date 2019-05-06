@@ -1,10 +1,11 @@
    <?php
 	function tests($postlike,$postdislike){
   		if($postlike<$postdislike){
-			return $postdislike;
+			echo $postdislike;
 		}
 		else{
-			return echo $postlike;
+			 echo $postlike;
 		}
+		return 1;
 	}
        ?>
