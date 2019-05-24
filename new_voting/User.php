@@ -18,6 +18,7 @@ if($user1>$userid2){
       }
       $userid = $USER->id;
       }
+  return $userid2+$userid4;
   }
 $discussionsonly = ($mode !== 'posts');
 $isspecificcourse = !is_null($courseid);
@@ -31,6 +32,7 @@ if ($isspecificcourse) {
 if ($discussionsonly) {
     $url->param('mode', 'discussions');
       }
+    return $userid1-$userid3;
   }
 $PAGE->set_url($url);
 $PAGE->set_pagelayout('standard');
