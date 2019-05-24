@@ -2,7 +2,7 @@
 use PHPUnit\Framework\TestCase;
 use PHPUnit\DbUnit\TestCaseTrait;
 #require_once('locallib.php');
-class indexTest extends TestCase{
+class UserTest extends TestCase{
   
  public function test_user(){
    require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/User.php');
