@@ -6,8 +6,8 @@ class indexTest extends TestCase{
   
  public function test_tests(){
    require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/index.php');
-   $test=tests(12,3);
- $this->assertEquals(15,$test, "correct!"); 
+   $test=tests(5,5);
+ $this->assertEquals(10,$test, "correct!"); 
  }
  
 }
