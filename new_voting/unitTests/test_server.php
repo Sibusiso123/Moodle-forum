@@ -12,7 +12,7 @@ class serverTest extends TestCase{
  }
   public function test_getLikes(){
     require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/server.php');
-    $test1=getlikes(1,1);
- $this->assertEquals(1,$test1, "correct!"); 
+    $test=getlikes(1,1);
+ $this->assertEquals(1,$test, "correct!"); 
  }
 }
