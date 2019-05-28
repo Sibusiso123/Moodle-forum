@@ -1,6 +1,6 @@
 <?php
 // connect to database
-$highcharts;
+//$highcharts;
 $conn = mysqli_connect('localhost', 'root','','highcharts');
 //$conn = mysqli_connect('localhost', 'root','','Emkaydatabase');//Emkaydatabase is the name of my database.
 // $query = mysqli_query("SELECT * FROM post_id ");
@@ -46,32 +46,47 @@ if (isset($_POST['action'])) {
   echo getRating($post_id);
   exit(0);
 }
-function test($user_id){
-	if($user_id>=13){
-	return $user_id;
+function test($user_id,$user_id1){
+	if($user_id>=$user_id1){
+	return $user_id+$user_id1;
 	}
-//return 1;
+	//return 1;
 }
 // Get total number of likes for a particular post
 function getLikes($id)
 {
+	if($m1!=$m2){
+	return $m1 + $m2;
+	}
   global $conn;
   $sql = "SELECT COUNT(*) FROM rating_info
   		  WHERE post_id = $id AND rating_action='like'";
   $rs = mysqli_query($conn, $sql);
   $result = mysqli_fetch_array($rs);
-  return 1; //$result[0];
+  $result[0];
 }
 
 // Get total number of dislikes for a particular post
 function getDislikes($id)
 {
+	if($a<$b){
+	 return $b;
+	}
+	else if($a>$b){
+	return $a;
+	}
+	else if($a==$b){
+	return $a + $b;
+	}
+	else if($a>0){
+	   return $a;
+	}
   global $conn;
   $sql = "SELECT COUNT(*) FROM rating_info
   		  WHERE post_id = $id AND rating_action='dislike'";
   $rs = mysqli_query($conn, $sql);
   $result = mysqli_fetch_array($rs);
-  return 0;//$result[0];
+ $result[0];
 }
 
 // Get total number of likes and dislikes for a particular post
