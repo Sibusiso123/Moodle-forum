@@ -7,7 +7,8 @@ $conn = mysqli_connect('localhost', 'root','','Emkaydatabase');//Emkaydatabase i
 
 
 // lets assume a user is logged in with id $user_id
-$m1,$m2;
+// $m1;
+// $m2;
 $user_id = 13;//This is the user_id of the student that will be voting.
 
 if (!$conn) {
@@ -54,7 +55,7 @@ function test($user_id,$user_id1){
 	//return 1;
 }
 // Get total number of likes for a particular post
-function getLikes($id)
+function getLikes($m1,$m2,$id)
 {
 	if($m1!=$m2){
 	return $m1 + $m2;
@@ -68,7 +69,7 @@ function getLikes($id)
 }
 
 // Get total number of dislikes for a particular post
-function getDislikes($id)
+function getDislikes($id,$a,$b)
 {
 	if($a<$b){
 	 return $b;
