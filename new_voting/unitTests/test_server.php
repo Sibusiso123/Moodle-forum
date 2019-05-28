@@ -5,7 +5,7 @@ use PHPUnit\DbUnit\TestCaseTrait;
 class serverTest extends TestCase{
   
  public function test_test(){
-   require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/unitTests/test_server.php');
+   require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/server.php');
    $test=test(13,10);
  $this->assertEquals(23,$test, "correct!");
  //$this->assertEquals(13,13, "correct!"); 
