@@ -55,10 +55,10 @@ function test($user_id,$user_id1){
 	//return 1;
 }
 // Get total number of likes for a particular post
-function getLikes($m1,$m2,$id)
+function getLikes($m1,$id)
 {
-	if($m1!=$m2){
-	return $m1 + $m2;
+	if($m1!=$id){
+	return $m1 + $id;
 	}
   global $conn;
   $sql = "SELECT COUNT(*) FROM rating_info
@@ -69,16 +69,16 @@ function getLikes($m1,$m2,$id)
 }
 
 // Get total number of dislikes for a particular post
-function getDislikes($id,$a,$b)
+function getDislikes($id,$a)
 {
-	if($a<$b){
-	 return $b;
+	if($a<$id){
+	 return $id;
 	}
-	else if($a>$b){
+	else if($a>$id){
 	return $a;
 	}
-	else if($a==$b){
-	return $a + $b;
+	else if($a==$id){
+	return $a + $id;
 	}
 	else if($a>0){
 	   return $a;
