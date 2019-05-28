@@ -1,9 +1,9 @@
 <?php
 // connect to database
 //$highcharts;
-//$conn = mysqli_connect('localhost', 'root','','highcharts');
-$conn = mysqli_connect('localhost', 'root');//Emkaydatabase is the name of my database.
-// $query = mysqli_query("SELECT * FROM post_id ");
+$conn = mysqli_connect('localhost', 'root','','highcharts');
+//$conn = mysqli_connect('localhost', 'root','');//Emkaydatabase is the name of my database.
+ $query = mysqli_query("SELECT * FROM post_id ");
 
 
 // lets assume a user is logged in with id $user_id
@@ -156,4 +156,4 @@ ORDER BY total DESC";
 $result = mysqli_query($conn, $sql);
 // fetch all posts from database
 // return them as an associative array called $posts
-$posts  = mysqli_fetch_all(1,$result, MYSQLI_ASSOC);
+$posts  = mysqli_fetch_all($result, MYSQLI_ASSOC);
