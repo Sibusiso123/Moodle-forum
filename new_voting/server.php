@@ -7,6 +7,7 @@ $conn = mysqli_connect('localhost', 'root','','Emkaydatabase');//Emkaydatabase i
 
 
 // lets assume a user is logged in with id $user_id
+$m1,$m2;
 $user_id = 13;//This is the user_id of the student that will be voting.
 
 if (!$conn) {
