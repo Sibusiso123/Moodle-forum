@@ -44,7 +44,7 @@ if (isset($_POST['action'])) {
   }
 
   // execute query to effect changes in the database ...
-  mysqli_query($conn, $sql);
+  mysqli_query($sql);
   echo getRating($post_id);
   exit(0);
 }
@@ -60,10 +60,9 @@ function getLikes($m1,$id)
 	if($m1!=$id){
 	return $m1 + $id;
 	}
-  global $conn;
   $sql = "SELECT COUNT(*) FROM rating_info
   		  WHERE post_id = $id AND rating_action='like'";
-  $rs = mysqli_query($conn, $sql);
+  $rs = mysqli_query($sql);
   $result = mysqli_fetch_array($rs);
   $result[0];
 }
@@ -83,10 +82,10 @@ function getDislikes($id,$a)
 	else if($a>0){
 	   return $a;
 	}
-  global $conn;
+ 
   $sql = "SELECT COUNT(*) FROM rating_info
   		  WHERE post_id = $id AND rating_action='dislike'";
-  $rs = mysqli_query($conn, $sql);
+  $rs = mysqli_query($sql);
   $result = mysqli_fetch_array($rs);
  $result[0];
 }
@@ -99,8 +98,8 @@ function getRating($id)
   $likes_query = "SELECT COUNT(*) FROM rating_info  WHERE post_id = $id AND rating_action='like'";
   $dislikes_query = "SELECT COUNT(*) FROM rating_info
 		  			WHERE post_id = $id AND rating_action='dislike'";
-  $likes_rs = mysqli_query($conn, $likes_query);
-  $dislikes_rs = mysqli_query($conn, $dislikes_query);
+  $likes_rs = mysqli_query($likes_query);
+  $dislikes_rs = mysqli_query($dislikes_query);
   $likes = mysqli_fetch_array($likes_rs);
   $dislikes = mysqli_fetch_array($dislikes_rs);
   $rating = [
@@ -117,7 +116,7 @@ function userLiked($post_id)
   global $user_id;
   $sql = "SELECT * FROM rating_info  WHERE user_id=$user_id
   		  AND post_id=$post_id AND rating_action='like'";
-  $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($sql);
   if (mysqli_num_rows($result) > 0) {
   	return true;
   }
@@ -129,11 +128,10 @@ function userLiked($post_id)
 // Check if user already dislikes post or not
 function userDisliked($post_id)
 {
-  global $conn;
   global $user_id;
   $sql = "SELECT * FROM rating_info  WHERE user_id=$user_id
   		  AND post_id=$post_id AND rating_action='dislike'";
-  $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($sql);
   if (mysqli_num_rows($result) > 0) {
   	return true;
   }else{
@@ -153,7 +151,7 @@ FROM posts AS c
   INNER JOIN rating_info AS b ON b.post_id = c.id
 GROUP BY c.id
 ORDER BY total DESC";
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($sql);
 // fetch all posts from database
 // return them as an associative array called //$posts
 //$posts  = mysqli_fetch_all($result);
