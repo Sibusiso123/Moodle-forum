@@ -1,54 +1,19 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
-//
-// Moodle is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// Moodle is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * mod_moodleforum data generator
- *
- * @package    mod_moodleforum
- * @copyright  2016 Your Name <your@email.address>
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
 
 defined('MOODLE_INTERNAL') || die();
 require_once(__DIR__ . '/../../locallib.php');
 
-/**
- * moodleforum module data generator class
- *
- * @package   mod_moodleforum
- * @copyright 2017 Kennet Winter <k_wint10@uni-muenster.de>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
+
+
 class mod_moodleforum_generator extends testing_module_generator {
 
-    /**
-     * @var int keep track of how many moodleforum discussions have been created.
-     */
     protected $discussioncount = 0;
 
-    /**
-     * @var int keep track of how many moodleforum posts have been created.
-     */
+
     protected $postcount = 0;
 
-    /**
-     * To be called from data reset code only,
-     * do not use in tests.
-     * @return void
-     */
+
     public function reset() {
         $this->discussioncount = 0;
         $this->postcount = 0;
@@ -56,14 +21,7 @@ class mod_moodleforum_generator extends testing_module_generator {
         parent::reset();
     }
 
-    /**
-     * Creates a moodleforum instance.
-     *
-     * @param null       $record
-     * @param array|null $options
-     *
-     * @return stdClass
-     */
+
     public function create_instance($record = null, array $options = null) {
 
         // Transform the record.
@@ -91,24 +49,7 @@ class mod_moodleforum_generator extends testing_module_generator {
         return parent::create_instance($record, (array) $options);
     }
 
-    /**
-     * Creates a moodleforum discussion.
-     *
-     * @param null $record
-     *
-     * @return bool|int
-     * @throws coding_exception
-     */
 
-    /**
-     * Creates a moodleforum discussion.
-     *
-     * @param null $record The discussion record.
-     * @param null $forum The moodleforum to insert the discussion.
-     *
-     * @return mixed The new discussion record.
-     * @throws coding_exception
-     */
     public function create_discussion($record = null, $forum = null) {
         global $DB;
 
@@ -186,13 +127,6 @@ class mod_moodleforum_generator extends testing_module_generator {
         return $discussion;
     }
 
-    /**
-     * Function to create a dummy post.
-     *
-     * @param array|stdClass $record
-     *
-     * @return stdClass the post object
-     */
     public function create_post($record = null) {
         global $DB;
         // Increment the forum post count.
