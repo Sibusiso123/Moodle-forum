@@ -16,6 +16,18 @@
             <directory suffix=".php">./new_voting/index3.php</directory>
            </whitelist>
          </filter>
+         
+                  <testsuites>
+           <testsuite name="Unit tests">
+             <directory suffix=".php">moodleforum/tests/UnitTests2</directory>
+           </testsuite>
+         </testsuites>
+
+         <filter>
+           <whitelist>
+            <directory suffix=".php">./moodleforum/tests/locallib_test.php</directory>
+           </whitelist>
+         </filter>
 
          <logging>
            <log type="coverage-html" target="test_reports/coverage" title="coverage" charset="UTF-8" yui="true" highlight="true"
