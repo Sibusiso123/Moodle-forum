@@ -1,0 +1,541 @@
+/*
+ * General settings.
+ */
+.indent {
+    margin-left: 6%;
+}
+
+.tmargin {
+    margin-top: 20px;
+}
+
+/*
+ * The discussionlist in the view.php
+ */
+.moodleforumheaderlist {
+    border-collapse: separate;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.moodleforumheaderlist td {
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+}
+
+.moodleforumheaderlist th.header.replies .iconsmall {
+    margin: 0 .3em;
+}
+
+.moodleforumheaderlist .picture {
+    width: 35px;
+}
+
+.moodleforumheaderlist .discussion .starter {
+    vertical-align: middle;
+}
+
+.moodleforumheaderlist .discussion .pinned img {
+    padding: 5px;
+}
+
+.moodleforumheaderlist .discussion .lastpost {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.moodleforumheaderlist .replies,
+.moodleforumheaderlist .discussion .author {
+    white-space: nowrap;
+}
+
+.moodleforumheaderlist thead .discussionsubscription {
+    text-align: center;
+}
+
+.moodleforumheaderlist tbody tr:nth-of-type(odd) {
+    background-color: #fafafa;
+}
+
+.moodleforumheaderlist {
+    background-color: #f9feff;
+}
+
+.moodleforumheaderlist .table-active:hover {
+    background-color: #dff8ff;
+}
+
+.moodleforumheaderlist .table-active:hover > td,
+.moodleforumheaderlist .table-active:hover > th {
+    background-color: #dff8ff;
+}
+
+.moodleforumheaderlist .table-success:hover {
+    background-color: #d0e9c6;
+}
+
+.moodleforumheaderlist .table-success:hover > td,
+.moodleforumheaderlist .table-success:hover > th {
+    background-color: #d0e9c6;
+}
+
+.moodleforumheaderlist .table-info:hover {
+    background-color: #c4e3f3;
+}
+
+.moodleforumheaderlist .table-info:hover > td,
+.moodleforumheaderlist .table-info:hover > th {
+    background-color: #c4e3f3;
+}
+
+.moodleforumheaderlist .table-warning:hover {
+    background-color: #faf2cc;
+}
+
+.moodleforumheaderlist .table-warning:hover > td,
+.moodleforumheaderlist .table-warning:hover > th {
+    background-color: #faf2cc;
+}
+
+.moodleforumheaderlist .table-danger:hover {
+    background-color: #ebcccc;
+}
+
+.moodleforumheaderlist .table-danger:hover > td,
+.moodleforumheaderlist .table-danger:hover > th {
+    background-color: #ebcccc;
+}
+
+.moodleforumheaderlist,
+.moodleforumheaderlist td {
+    border: none;
+}
+
+.moodleforumheaderlist thead .header,
+.moodleforumheaderlist tbody .discussion td {
+    padding-left: .5em;
+    padding-right: .5em;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.moodleforumheaderlist thead .header {
+    vertical-align: top;
+    white-space: normal;
+}
+
+.moodleforumheaderlist thead .header.replies {
+    text-align: center;
+}
+
+.moodleforumheaderlist thead .header.lastpost {
+    text-align: right;
+}
+
+.moodleforumheaderlist thead .header th.discussionsubscription,
+.moodleforumheaderlist tbody .discussion td.discussionsubscription {
+    padding-left: .5em;
+    padding-right: .5em;
+    width: 16px;
+}
+
+.moodleforumheaderlist .discussion .author,
+.moodleforumheaderlist .discussion .replies,
+.moodleforumheaderlist .discussion .lastpost {
+    white-space: normal;
+}
+
+.moodleforumheaderlist .discussion .discussionsubscription,
+.moodleforumheaderlist .discussion .replies {
+    text-align: center;
+}
+
+.moodleforumheaderlist .discussion .topic,
+.moodleforumheaderlist .discussion .discussionsubscription,
+.moodleforumheaderlist .discussion .topic.starter,
+.moodleforumheaderlist .discussion .picture,
+.moodleforumheaderlist .discussion .author,
+.moodleforumheaderlist .discussion .replies,
+.moodleforumheaderlist .discussion .lastpost {
+    vertical-align: top;
+}
+
+.moodleforumheaderlist .discussion .topic .icon {
+    margin-left: 0;
+}
+
+/*
+ * The form to post new messages.
+ */
+.moodleforumaddnew {
+    margin-bottom: 20px;
+}
+
+#newdiscussionform {
+    float: left;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/*
+ * The Index Page.
+ */
+#page-mod-moodleforum-index .subscription {
+    float: right;
+    margin: 5px 0;
+    text-align: right;
+    white-space: nowrap;
+}
+
+#page-mod-moodleforum-index span.unread img {
+    border-style: none;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/*
+ * The styles for the discussion.php
+ */
+.moodleforumpost {
+    border: 1px solid #000;
+    display: block;
+    margin: 0 0 1em 0;
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+.moodleforumpost .row {
+    position: relative;
+    width: 100%;
+}
+
+.moodleforumpost .row .left {
+    float: left;
+    overflow: hidden;
+    width: 43px;
+}
+
+.moodleforumpost .row .left .votes {
+    display: block;
+    margin: 0 8px 0 0;
+    text-align: center;
+}
+
+.moodleforumpost .row .left .votes p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.moodleforumpost .row .left .votes .icon {
+    color: #0a0;
+    height: 24px;
+    margin: 0;
+    width: 24px;
+}
+
+.moodleforumpost .row .topic,
+.moodleforumpost .row .content-mask,
+.moodleforumpost .row .options {
+    margin-left: 43px;
+}
+
+.moodleforumpost .picture img {
+    margin: 4px;
+}
+
+.moodleforumpost .options .commands,
+.moodleforumpost .content .attachments,
+.moodleforumpost .options .footer,
+.moodleforumpost .options .link {
+    text-align: right;
+}
+
+.moodleforumpost .options .moodleforum-post-rating {
+    float: left;
+}
+
+.moodleforumpost .content .posting {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.moodleforumpost .content .attachedimages img {
+    max-width: 100%;
+}
+
+.moodleforumpost .post-word-count {
+    font-size: .85em;
+    font-style: italic;
+}
+
+.moodleforumpost .shortenedpost .post-word-count {
+    display: inline;
+    padding: 0 .3em;
+}
+
+:target ~ .moodleforumpost:before {
+    background: #0070a8;
+    bottom: -1px;
+    content: "";
+    display: block;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: 4px;
+}
+
+.moodleforumpost {
+    background-color: #fff;
+    border: 1px solid rgba(238, 238, 238, 1);
+    border-radius: 0;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    padding: 6px;
+}
+
+.moodleforumpost.statusboth:before {
+    background: linear-gradient(80deg, rgba(234, 133, 22, 1) 50%, rgba(112, 160, 52, 1) 50%);
+    bottom: -1px;
+    content: "";
+    display: block;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: 4px;
+}
+
+.moodleforumpost.statusteacher:before {
+    background: rgba(112, 160, 52, 1);
+    bottom: -1px;
+    content: "";
+    display: block;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: 4px;
+}
+
+.moodleforumpost.statusstarter:before {
+    background: rgba(234, 133, 22, 1);
+    bottom: -1px;
+    content: "";
+    display: block;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: 4px;
+}
+
+.moodleforumpost > .list-group:first-child .list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.moodleforumpost > .list-group:first-child .list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.moodleforumpost > .list-group:last-child .list-group-item:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#region-main > .moodleforumpost {
+    min-height: 45rem;
+    overflow-x: auto;
+    overflow-y: visible;
+}
+
+.moodleforumpost .header {
+    margin-bottom: 3px;
+}
+
+.moodleforumpost .picture img {
+    margin: 3px;
+}
+
+.moodleforumpost .picture img.userpicture {
+    margin-left: 3px;
+    margin-right: 10px;
+}
+
+.moodleforumpost .content .posting.fullpost {
+    margin-top: 8px;
+}
+
+.moodleforumpost .row.side {
+    clear: both;
+}
+
+.moodleforumpost .options .commands {
+    margin-left: 0;
+}
+
+.moodleforumpost .options .moodleforum-post-rating .icon {
+    height: 20px;
+    width: 24px;
+}
+
+.moodleforumpost .subject {
+    font-weight: 700;
+}
+
+.moodleforumpost.unread .row.header,
+span.unread {
+    background-color: #ffd;
+}
+
+.moodleforumpost.unread .row.header {
+    border-bottom: 1px solid #ddd;
+}
+
+.moodleforumpost .row {
+    margin-left: 0;
+}
+
+.moodleforumpost .row:before,
+.moodleforumpost .row:after {
+    content: none;
+}
+
+.moodleforumpost .topic .author {
+    color: #848d95;
+}
+
+.moodleforumpost .topic .author .icon {
+    margin-right: 0;
+}
+
+.moodleforumpost .attachments img {
+    max-width: 40em;
+    max-height: 30em;
+}
+
+/*
+ * The Votes.
+ */
+.moodleforumpost td.votecell {
+    float: left;
+    overflow: hidden;
+    width: 43px;
+}
+
+.moodleforumpost td.votecell .votes {
+    display: block;
+    margin: 0 8px 0 0;
+    text-align: center;
+}
+
+.moodleforumpost td.votecell .votes p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.moodleforumpost td.votecell .votes .icon {
+    color: #0a0;
+    height: 24px;
+    margin: 0;
+    width: 24px;
+}
+
+/*
+ * The Answers.
+ */
+.moodleforumpost td.answercell {
+    vertical-align: top;
+    width: 100%;
+}
+
+.moodleforumpost td.answercell .post-text {
+    margin-bottom: 5px;
+    overflow-wrap: break-word;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.moodleforumpost td.answercell .comment-by {
+    color: #848d95;
+}
+
+.moodleforumpost td.answercell .comment-commands {
+    text-align: right;
+}
+
+.moodleforumpost td.answercell table.post-info {
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+.moodleforumpost td.answercell table.post-info td.rightbox {
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.moodleforumpost td.answercell table.post-info td.rightbox .status {
+    color: #848d95;
+}
+
+.moodleforumpost td.answercell table.post-info td.rightbox .status .icon {
+    height: 16px;
+    width: 16px;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox {
+    text-align: left;
+    vertical-align: top;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info {
+    box-sizing: border-box;
+    color: #848d95;
+    padding: 5px 6px 7px 7px;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info::before {
+    content: "";
+    display: table;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info::after {
+    clear: both;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info .user-action-time {
+    margin-bottom: 4px;
+    margin-top: 1px;
+    white-space: nowrap;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info .user-avatar {
+    border-collapse: separate;
+    border-radius: 1px;
+    float: left;
+    height: 32px;
+    width: 32px;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info .user-details {
+    float: left;
+    line-height: 17px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info .user-details .icon {
+    margin-bottom: 3px;
+    margin-right: 0;
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info .user-avatar + .user-details {
+    margin-left: 8px;
+    width: calc(100% - 40px);
+}
+
+.moodleforumpost td.answercell table.post-info td.leftbox .user-info .user-details .-flair {
+    display: block;
+}
