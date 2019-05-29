@@ -12,6 +12,9 @@
 	  else if($num1==$num2){
 		  return $num1;
 	  }
+	  else if($num1 != 100){
+	  	return 0;
+	  }
 	
   }
 ?>
