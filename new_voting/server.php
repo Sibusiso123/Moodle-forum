@@ -155,5 +155,5 @@ GROUP BY c.id
 ORDER BY total DESC";
 $result = mysqli_query($conn, $sql);
 // fetch all posts from database
-// return them as an associative array called $posts
-$posts  = mysqli_fetch_all($result);
+// return them as an associative array called //$posts
+//$posts  = mysqli_fetch_all($result);
