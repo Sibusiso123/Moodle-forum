@@ -1,9 +1,9 @@
 <?php
 // connect to database
 //$highcharts;
-$conn = mysqli_connect('localhost', 'root','','Emkaydatabase');
+$conn=mysqli_query("SELECT * FROM post_id ");;// mysqli_connect('localhost', 'root','','Emkaydatabase');
 //$conn = mysqli_connect('localhost', 'root','');//Emkaydatabase is the name of my database.
- $query = mysqli_query("SELECT * FROM post_id ");
+ //$query = mysqli_query("SELECT * FROM post_id ");
 
 
 // lets assume a user is logged in with id $user_id
