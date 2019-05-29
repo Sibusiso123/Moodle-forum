@@ -1,8 +1,10 @@
 <?php
 $dbhost = 'localhost';
-$dbname='highcharts';
 $dbuser='root';
 $dbpass='';
+$dbname='Emkaydatabase';
+
+
 
 try{
 	$dbcon = new PDO("mysql:host={$dbhost};dbname={$dbname}",$dbuser,$dbpass);
