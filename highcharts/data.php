@@ -2,7 +2,7 @@
 $dbhost = 'localhost';
 $dbuser='root';
 $dbpass='';
-$dbname='Emkaydatabase';
+$dbname='highcharts';
 
 
 
