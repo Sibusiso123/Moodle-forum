@@ -23,7 +23,7 @@ class mod_moodleforum_locallib_testcase extends advanced_testcase {
     /**
      * Test subscription using automatic subscription on create.
      */
-    public function test_moodleforum_auto_subscribe_on_create() {
+    public function test_moodleforum_auto_subscribe_on_create($a,$b) {
         global $DB;
 
         $this->resetAfterTest();
@@ -36,7 +36,7 @@ class mod_moodleforum_locallib_testcase extends advanced_testcase {
             $user = $this->getDataGenerator()->create_user();
             $users[] = $user;
             $this->getDataGenerator()->enrol_user($user->id, $course->id);
-            return 2;
+            
         }
 
         $options = array('course' => $course->id, 'forcesubscribe' => moodleforum_INITIALSUBSCRIBE); // Automatic Subscription.
@@ -51,6 +51,13 @@ class mod_moodleforum_locallib_testcase extends advanced_testcase {
         foreach ($users as $user) {
             $this->assertTrue(\mod_moodleforum\subscriptions::is_subscribed($user->id, $mo));
         }
+        if($a==$b){
+            return $b;
+        }
+        else if($a>$b){
+            return $a+$b;
+        }
+        return 2;
     }
 
     /**
