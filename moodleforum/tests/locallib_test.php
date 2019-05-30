@@ -36,6 +36,7 @@ class mod_moodleforum_locallib_testcase extends advanced_testcase {
             $user = $this->getDataGenerator()->create_user();
             $users[] = $user;
             $this->getDataGenerator()->enrol_user($user->id, $course->id);
+            return 2;
         }
 
         $options = array('course' => $course->id, 'forcesubscribe' => moodleforum_INITIALSUBSCRIBE); // Automatic Subscription.
