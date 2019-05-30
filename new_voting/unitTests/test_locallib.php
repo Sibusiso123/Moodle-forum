@@ -5,7 +5,7 @@ use PHPUnit\DbUnit\TestCaseTrait;
 class locallibTest extends TestCase{
   
  public function test_test_moodleforum_auto_subscribe_on_create(){
-   require_once('/home/travis/build/hex-hypercity/Moodle-forum/moodleforum/tests/locallib.php');
+   require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/locallib.php');
    $test=test_moodleforum_auto_subscribe_on_create(1,1);
  $this->assertEquals(1,$test, "correct!"); 
  }
