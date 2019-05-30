@@ -10,4 +10,11 @@ class locallib_testTest extends TestCase{
  $this->assertEquals(1,$test, "correct!"); 
  }
  
+   public function test_test_moodleforum_auto_subscribe_on_create(){
+   require_once('/home/travis/build/hex-hypercity/Moodle-forum/moodleforum/tests/locallib_test.php');
+   $test=test_test_moodleforum_auto_subscribe_on_create(2,2);
+ $this->assertEquals(2,$test, "correct!"); 
+ }
+ 
 }
+
