@@ -471,7 +471,7 @@ class ratings {
                   FROM {moodleforum_posts} p
                   JOIN {moodleforum_ratings} r ON p.id = r.postid
                  WHERE p.userid = ? AND NOT r.userid = ?
-              ORDER BY r.postid DESC";
+              ORDER BY r.postid ASC";
         $params = array($userid, $userid);
         $records = $DB->get_records_sql($sql, $params);
 
