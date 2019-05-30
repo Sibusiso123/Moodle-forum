@@ -1,9 +1,11 @@
 <?php
-require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/index3.php');
+
 
 use PHPUnit\Framework\TestCase;
 use PHPUnit\DbUnit\TestCaseTrait;
 class index3Test extends TestCase{
+    
+    require_once('/home/travis/build/hex-hypercity/Moodle-forum/moodleforum/post.php');
     /**
      * @covers downvote
      */
