@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die();
 // Default strings that moodle forum uses.
 $string['modulename']             = 'Forum';
 $string['modulenameplural']       = 'moodleforums';
-$string['modulename_help']        = 'Yeyi.';
+$string['modulename_help']        = 'The forum activity allows students and teachers to exchange ideas by posting comments as part of a thread. Files such as images and media maybe included in forum posts. The teacher can choose to rate forum posts and it is also possible to give students permission to rate each others posts.A student can upvote or Downvote another students post .';
 $string['moodleforumfieldset'] = 'Custom example fieldset';
 $string['moodleforumname']     = 'Forum';
 $string['moodleforum']         = 'Forum';
