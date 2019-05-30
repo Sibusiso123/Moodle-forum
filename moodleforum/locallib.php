@@ -316,7 +316,13 @@ function moodleforum_print_latest_discussions($moodleforum, $cm, $page = -1, $pe
 
     // Include the renderer.
     $renderer = $PAGE->get_renderer('mod_moodleforum');
-
+    
+    //sort the discussion list with the most number of votes(descending order)
+    usort($preparedarray, function($a, $b) {
+    	return $b['votes'] <=> $a['votes'];
+	});   
+    
+    
     // Collect the needed data being submitted to the template.
     $mustachedata = new stdClass();
     $mustachedata->cantrack = $cantrack;
