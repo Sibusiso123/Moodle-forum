@@ -27,7 +27,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-// Default strings.
+// Default strings that moodle forum uses.
 $string['modulename']             = 'Forum';
 $string['modulenameplural']       = 'moodleforums';
 $string['modulename_help']        = 'Yeyi.';
@@ -56,10 +56,10 @@ $string['moodleforum:marksolved']          = 'Mark a post as solved';
 $string['nowallsubscribed']                   = 'All forums in {$a} are subscribed.';
 $string['nowallunsubscribed']                 = 'All forums in {$a} are unsubscribed.';
 
-// Strings for the view.php.
+// Strings used in the view.php.
 $string['noviewdiscussionspermission'] = 'You do not have the permission to view discussions in this forum';
 
-// Strings for the locallib.php.
+// Strings fused in the locallib.php.
 $string['addanewdiscussion']    = 'Add a new discussion topic';
 $string['nodiscussions']        = 'There are no discussion topics yet in this forum.';
 $string['headerdiscussion']     = 'Discussion';
@@ -82,7 +82,7 @@ $string['bynameondatenorating'] = 'by {$a->name} - {$a->date}';
 $string['deletesure']           = 'Are you sure you want to delete this post?';
 $string['deletesureplural']     = 'Are you sure you want to delete this post and all replies? ({$a} posts)';
 
-// Strings for the settings.php.
+// Strings used in settings.php.
 $string['configmanydiscussions']     = 'Maximum number of discussions shown in a moodleforum instance per page';
 $string['manydiscussions']           = 'Discussions per page';
 $string['maxattachmentsize']         = 'Maximum attachment size';
