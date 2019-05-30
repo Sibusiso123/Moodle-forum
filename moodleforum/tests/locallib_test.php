@@ -149,7 +149,7 @@ class mod_moodleforum_locallib_testcase extends advanced_testcase {
         foreach ($users as $user) {
             $this->assertFalse(\mod_moodleforum\subscriptions::is_subscribed($user->id, $mo));
         }
-        return 1;
+        //return 1;
     }
 
 
