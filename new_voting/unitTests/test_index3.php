@@ -2,12 +2,10 @@
 use PHPUnit\Framework\TestCase;
 use PHPUnit\DbUnit\TestCaseTrait;
 #require_once('locallib.php');
-class index3Test extends TestCase{
+class postTest extends TestCase{
   
- public function test_number(){
-   require_once('/home/travis/build/hex-hypercity/Moodle-forum/new_voting/index3.php');
-   $test=number(2,3);
- $this->assertEquals(3,$test, "correct!"); 
+ public function TestUpvote(){
+   require_once('/home/travis/build/hex-hypercity/Moodle-forum/tests/config.php');
  }
  
 }
