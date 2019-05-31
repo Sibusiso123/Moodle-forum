@@ -1,9 +1,6 @@
-#MOODLE-FORUM UP AND DOWN VOTE
+# MOODLE-FORUM UP AND DOWN VOTE
 
 # Draw.io GitHub Integration
-
-Please read <a href="https://github.com/jgraph/drawio-html5" target="_blank">this</a> for a high-level introduction.
-
 
 [![Coverage Status](https://coveralls.io/repos/github/hex-hypercity/Moodle-forum/badge.svg?branch=%28HEAD+detached+at+590341b%29)](https://coveralls.io/github/hex-hypercity/Moodle-forum?branch=%28HEAD+detached+at+590341b%29)
 
