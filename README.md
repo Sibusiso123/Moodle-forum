@@ -1,6 +1,6 @@
 # MOODLE-FORUM UP AND DOWN VOTE
 
-![](https://github.com/hex-hypercity/Moodle-forum/blob/master/review-vote-thubms-up-down.png)
+![](https://github.com/hex-hypercity/Moodle-forum/blob/master/down-up.png)
 
 # Draw.io GitHub Integration
 
