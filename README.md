@@ -6,7 +6,9 @@
 
 [![Build Status](https://travis-ci.org/hex-hypercity/Moodle-forum.svg?branch=master)](https://travis-ci.org/hex-hypercity/Moodle-forum)
 
-![Diagram](http://jgraph.github.io/drawio-github/Best-and-Worst.png)
+
+##            ![](https://github.com/hex-hypercity/Moodle-forum/blob/master/Best-and-Worst.png)
+
 
 ![Diagram](http://jgraph.github.io/drawio-github/diagram.png)
 
