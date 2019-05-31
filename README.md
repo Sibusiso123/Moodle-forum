@@ -6,6 +6,8 @@
 
 [![Build Status](https://travis-ci.org/hex-hypercity/Moodle-forum.svg?branch=master)](https://travis-ci.org/hex-hypercity/Moodle-forum)
 
+![Diagram](http://jgraph.github.io/drawio-github/Best-and-Worst.png)
+
 ![Diagram](http://jgraph.github.io/drawio-github/diagram.png)
 
 <a href="http://jgraph.github.io/drawio-github/edit-diagram.html?repo=drawio-github&path=diagram.png" target="_blank">Edit</a> | <a href="https://www.draw.io/#Uhttps%3A%2F%2Fjgraph.github.io%2Fdrawio-github%2Fdiagram.png" target="_blank">Edit As New</a>
