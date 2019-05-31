@@ -9,7 +9,7 @@
 	  else if($num1<$num2 && $num2 > 4){
 		  return $num2;
 	  }
-	  else if ($num1==$num2 || $num == 0){
+	  else if ($num1==$num2 || $num2 == 0){
 		  return $num1;
 	  }
   }
