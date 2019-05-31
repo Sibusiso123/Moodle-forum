@@ -1,6 +1,6 @@
 # MOODLE-FORUM UP AND DOWN VOTE
 
-##![](https://github.com/hex-hypercity/Moodle-forum/blob/master/Best-and-Worst.png)
+![](https://github.com/hex-hypercity/Moodle-forum/blob/master/Best-and-Worst.png)
 
 # Draw.io GitHub Integration
 
