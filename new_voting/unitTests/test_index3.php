@@ -1,7 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use PHPUnit\DbUnit\TestCaseTrait;
-#require_once('locallib.php');
 class index3Test extends TestCase{
   
  public function test_number(){
