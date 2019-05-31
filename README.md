@@ -10,5 +10,5 @@
 
 
 
-
+Hex-Hypercity is a group of software developers working on a moodle forum which is an online environment where users can share and reflect their understanding on a course.The users should also be able to upvote and downvote a discussion.
 
